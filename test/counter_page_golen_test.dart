@@ -6,11 +6,13 @@ import 'package:learn_flutter_test/app/app.dart';
 void main() {
   testGoldens('CounterPage click', (tester) async {
     final builder = DeviceBuilder()
-      ..overrideDevicesForAllScenarios(devices: [
-        Device.phone,
-        Device.iphone11,
-        const Device(name: 'ipad pro', size: Size(1366, 1024))
-      ],) //　テストしたい端末かサイズを指定
+      ..overrideDevicesForAllScenarios(
+        devices: [
+          Device.phone,
+          Device.iphone11,
+          const Device(name: 'ipad pro', size: Size(1366, 1024))
+        ],
+      ) //　テストしたい端末かサイズを指定
       ..addScenario(
         widget: const App(),
         name: 'init',

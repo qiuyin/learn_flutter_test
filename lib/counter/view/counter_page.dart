@@ -51,6 +51,9 @@ class CounterText extends StatelessWidget {
     final theme = Theme.of(context);
     final count = context.select((CounterCubit cubit) => cubit.state);
     return Text(
-        key: const Key('count'), '$count', style: theme.textTheme.headline1,);
+      key: const Key('count'),
+      '$count',
+      style: theme.textTheme.headline1,
+    );
   }
 }
