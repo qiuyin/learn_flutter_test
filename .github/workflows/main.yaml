@@ -23,6 +23,8 @@ jobs:
         with:
           channel: stable
           flutter-version: 3.3.8
+          cache: true
+          cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
       - name: Run Test
         run: |
           chromedriver --port=4444 &
