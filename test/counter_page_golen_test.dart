@@ -10,7 +10,7 @@ void main() {
         Device.phone,
         Device.iphone11,
         const Device(name: 'ipad pro', size: Size(1366, 1024))
-      ]) //　テストしたい端末かサイズを指定
+      ],) //　テストしたい端末かサイズを指定
       ..addScenario(
         widget: const App(),
         name: 'init',

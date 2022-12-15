@@ -14,17 +14,20 @@ void main() {
     debugPrint('---test start--');
     app.main();
     await tester.pumpAndSettle();
+    // ignore: lines_longer_than_80_chars
     expectCustom((find.byKey(const Key('count')).evaluate().single.widget as Text).data, '0');
 
     debugPrint('--tab add button--');
     final addButton = find.byIcon(Icons.add);
     await tester.tap(addButton);
     await tester.pumpAndSettle();
+    // ignore: lines_longer_than_80_chars
     expectCustom((find.byKey(const Key('count')).evaluate().single.widget as Text).data, '1');
 
     debugPrint('--tab add button--');
     await tester.tap(addButton);
     await tester.pumpAndSettle();
+    // ignore: lines_longer_than_80_chars
     expectCustom((find.byKey(const Key('count')).evaluate().single.widget as Text).data, '2');
     debugPrint('--test end--');
   });

@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Future<void> waitFor(
@@ -15,6 +14,7 @@ Future<void> waitFor(
     }
 
     await tester.pumpAndSettle();
+    // ignore: inference_failure_on_instance_creation
     await Future.delayed(const Duration(milliseconds: 100));
   } while (finder.evaluate().isEmpty);
 }
